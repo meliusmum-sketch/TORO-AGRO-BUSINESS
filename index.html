@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toro Agrobusiness Company SUARL | Dakar, Sénégal</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C8952A;--gold-l:#E8B84B;--gold-p:#F5DFA0;--gd:#152A18;--gm:#2D5A35;--cr:#F7F3EB;--wh:#FFFFFF;--td:#1C1C1C;--tg:#666;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--cr);color:var(--td);overflow-x:hidden;}
+
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(21,42,24,0.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--gold);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:82px;transition:box-shadow .3s;}
+.nav-logo{display:flex;align-items:center;gap:16px;text-decoration:none;cursor:pointer;}
+.logo-emblem{width:62px;height:62px;flex-shrink:0;}
+.logo-emblem svg{width:100%;height:100%;filter:drop-shadow(0 0 8px rgba(200,149,42,0.4));}
+.logo-div{width:1px;height:40px;background:rgba(200,149,42,0.3);}
+.logo-wm{display:flex;flex-direction:column;gap:3px;}
+.wm-top{font-family:'Cinzel',serif;font-weight:900;font-size:1.22rem;color:var(--wh);letter-spacing:4px;line-height:1;}
+.wm-top em{color:var(--gold-l);font-style:normal;}
+.wm-mid{font-size:0.6rem;font-weight:400;color:rgba(255,255,255,0.42);letter-spacing:3px;text-transform:uppercase;}
+.wm-bot{font-family:'Cormorant Garamond',serif;font-size:0.74rem;font-weight:400;color:var(--gold);letter-spacing:1px;font-style:italic;}
+
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:color .3s;position:relative;cursor:pointer;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s;}
+.nav-links a:hover{color:var(--gold-l);}
+.nav-links a:hover::after{width:100%;}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+.hamburger span{display:block;width:26px;height:2px;background:var(--gold-l);transition:.3s;}
+
+#hero{min-height:100vh;background:linear-gradient(155deg,rgba(21,42,24,0.93) 0%,rgba(45,90,53,0.62) 50%,rgba(200,149,42,0.2) 100%),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1800&q=85') center/cover no-repeat;display:flex;align-items:center;padding:0 5%;padding-top:82px;position:relative;overflow:hidden;}
+#hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(to top,var(--cr),transparent);}
+#hero::before{content:'TORO';position:absolute;right:-3%;bottom:5%;font-family:'Cinzel',serif;font-size:clamp(7rem,20vw,24rem);font-weight:900;color:rgba(200,149,42,0.055);line-height:1;pointer-events:none;letter-spacing:-4px;}
+.hero-inner{position:relative;z-index:1;animation:fadeUp 1s ease forwards;max-width:800px;}
+.hero-eye{display:inline-flex;align-items:center;gap:12px;background:rgba(200,149,42,0.12);border:1px solid rgba(200,149,42,0.45);color:var(--gold-p);padding:8px 22px;font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:30px;border-radius:1px;}
+.hero-eye::before{content:'';width:24px;height:1px;background:var(--gold);}
+.hero-inner h1{font-family:'Cinzel',serif;font-size:clamp(2.6rem,5.5vw,5.2rem);color:var(--wh);line-height:1.07;margin-bottom:26px;font-weight:900;letter-spacing:1px;}
+.hero-inner h1 em{color:var(--gold-l);font-style:normal;display:block;}
+.hero-inner p{color:rgba(255,255,255,0.76);font-size:clamp(1rem,1.8vw,1.18rem);line-height:1.85;margin-bottom:44px;max-width:580px;font-weight:300;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
+
+.btn-gold{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-l) 100%);color:var(--gd);padding:16px 40px;border:none;border-radius:1px;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 22px rgba(200,149,42,0.45);}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 36px rgba(200,149,42,0.6);}
+.btn-ghost{background:transparent;color:var(--wh);padding:15px 38px;border:1.5px solid rgba(255,255,255,0.4);border-radius:1px;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:border-color .3s,color .3s;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-l);}
+
+section{padding:100px 5%;}
+.stag{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:14px;}
+.stag::before{content:'';width:28px;height:1.5px;background:var(--gold);}
+.stitle{font-family:'Cinzel',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--gd);font-weight:700;line-height:1.2;margin-bottom:18px;letter-spacing:1px;}
+.ssub{color:var(--tg);font-size:1rem;line-height:1.85;max-width:580px;font-weight:300;}
+
+#about{background:var(--wh);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.aimg{position:relative;}
+.aimg img{width:100%;height:500px;object-fit:cover;display:block;}
+.abadge{position:absolute;bottom:-28px;right:-28px;background:linear-gradient(135deg,var(--gold),var(--gold-l));color:var(--gd);padding:28px 24px;text-align:center;}
+.abadge strong{font-family:'Cinzel',serif;font-size:2.8rem;display:block;line-height:1;font-weight:900;}
+.abadge span{font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+.afeats{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.feat{display:flex;gap:14px;align-items:flex-start;}
+.ftico{width:44px;height:44px;background:linear-gradient(135deg,var(--gd),var(--gm));border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem;}
+.feat h4{font-size:0.88rem;font-weight:600;color:var(--gd);margin-bottom:5px;}
+.feat p{font-size:0.82rem;color:var(--tg);line-height:1.6;}
+
+#products{background:var(--cr);}
+.phdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:60px;flex-wrap:wrap;gap:24px;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:3px;}
+.pcard{background:var(--wh);overflow:hidden;transition:transform .3s;}
+.pcard:hover{transform:translateY(-5px);}
+.pcard:hover .pimg img{transform:scale(1.07);}
+.pimg{height:230px;overflow:hidden;}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.pbdy{padding:26px;}
+.pcat{color:var(--gold);font-size:0.67rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:600;margin-bottom:8px;}
+.pcard h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--gd);margin-bottom:8px;}
+.pcard p{font-size:0.84rem;color:var(--tg);line-height:1.65;}
+
+#engagements{background:var(--gd);text-align:center;}
+#engagements .stag{color:var(--gold-l);justify-content:center;}
+#engagements .stag::before{background:var(--gold-l);}
+#engagements .stitle{color:var(--wh);}
+.egrid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:56px;}
+.ecard{background:rgba(255,255,255,0.04);border:1px solid rgba(200,149,42,0.18);padding:48px 28px;transition:background .3s,transform .3s;}
+.ecard:hover{background:rgba(200,149,42,0.1);transform:translateY(-6px);border-color:var(--gold);}
+.eico{font-size:2.5rem;margin-bottom:18px;}
+.ecard h3{font-family:'Cinzel',serif;color:var(--wh);font-size:0.95rem;font-weight:700;margin-bottom:12px;letter-spacing:1px;}
+.ecard p{color:rgba(255,255,255,0.52);font-size:0.84rem;line-height:1.7;}
+
+#contact{background:var(--cr);}
+.cgrid{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;margin-top:56px;}
+.cinfo h3{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--gd);margin-bottom:28px;letter-spacing:1px;}
+.iitem{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(0,0,0,0.07);}
+.iitem:last-of-type{border-bottom:none;}
+.iico{width:44px;height:44px;background:var(--gd);color:var(--gold-l);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.iitem h4{font-size:0.7rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:5px;font-weight:600;}
+.iitem p,.iitem a{font-size:0.9rem;color:var(--td);line-height:1.6;text-decoration:none;}
+.iitem a:hover{color:var(--gold);}
+.mapw{border-radius:2px;overflow:hidden;box-shadow:0 24px 64px rgba(21,42,24,0.15);height:100%;min-height:460px;}
+.mapw iframe{width:100%;height:100%;border:none;}
+
+.cform{background:var(--wh);padding:44px;margin-top:52px;box-shadow:0 8px 40px rgba(0,0,0,0.06);}
+.cform h3{font-family:'Cinzel',serif;font-size:1.4rem;color:var(--gd);margin-bottom:30px;letter-spacing:1px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;}
+.fg{margin-bottom:18px;}
+.fg label{display:block;font-size:0.7rem;font-weight:600;color:var(--gd);letter-spacing:1px;margin-bottom:7px;text-transform:uppercase;}
+.fg input,.fg select,.fg textarea{width:100%;padding:13px 16px;border:1.5px solid rgba(0,0,0,0.1);border-radius:1px;font-family:'Jost',sans-serif;font-size:0.9rem;color:var(--td);background:var(--cr);transition:border-color .3s;outline:none;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);background:var(--wh);}
+.fg textarea{resize:vertical;min-height:120px;}
+
+footer{background:var(--gd);color:rgba(255,255,255,0.55);padding:70px 5% 36px;}
+.ftop{display:grid;grid-template-columns:auto 1fr;gap:64px;padding-bottom:52px;border-bottom:1px solid rgba(200,149,42,0.2);margin-bottom:36px;align-items:start;}
+.fbrand{display:flex;gap:20px;align-items:flex-start;}
+.fbrandtxt h2{font-family:'Cinzel',serif;color:var(--wh);font-size:1.05rem;letter-spacing:2px;margin-bottom:12px;}
+.fbrandtxt p{font-size:0.84rem;line-height:1.8;max-width:320px;}
+.ninea{margin-top:14px;display:inline-block;background:rgba(200,149,42,0.12);border:1px solid rgba(200,149,42,0.3);padding:5px 14px;color:var(--gold-l);font-size:0.7rem;letter-spacing:1.5px;border-radius:1px;}
+.fcols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+.fcol h4{color:var(--gold-l);font-size:0.7rem;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:20px;font-weight:600;}
+.fcol ul{list-style:none;}
+.fcol ul li{margin-bottom:10px;}
+.fcol ul li a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:0.84rem;transition:color .3s;cursor:pointer;}
+.fcol ul li a:hover{color:var(--gold-l);}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.76rem;color:rgba(255,255,255,0.28);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:none;}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+
+@media(max-width:1024px){#about{grid-template-columns:1fr;gap:52px;}.abadge{right:0;bottom:-16px;}.cgrid{grid-template-columns:1fr;}.egrid{grid-template-columns:repeat(2,1fr);}.ftop{grid-template-columns:1fr;gap:40px;}.fbrand{flex-direction:column;}}
+@media(max-width:768px){.nav-links{display:none;flex-direction:column;}.nav-links.open{display:flex;position:fixed;top:82px;left:0;right:0;background:var(--gd);padding:16px 0;border-top:1px solid var(--gold);}.nav-links.open a{padding:14px 5%;display:block;}.hamburger{display:flex;}.egrid{grid-template-columns:1fr;}.fcols{grid-template-columns:1fr 1fr;}.frow{grid-template-columns:1fr;}.afeats{grid-template-columns:1fr;}.phdr{flex-direction:column;}.logo-emblem{width:48px;height:48px;}.wm-top{font-size:0.95rem;}}
+@media(max-width:480px){.fcols{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-logo" data-target="hero">
+    <div class="logo-emblem">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#C8952A" stroke-width="3"/>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(200,149,42,0.25)" stroke-width="1"/>
+        <circle cx="60" cy="60" r="56.5" fill="#152A18"/>
+        <path d="M37 40 Q24 22 15 8 Q22 15 28 28 Q33 36 37 40Z" fill="#C8952A"/>
+        <path d="M83 40 Q96 22 105 8 Q98 15 92 28 Q87 36 83 40Z" fill="#C8952A"/>
+        <path d="M34 64 Q30 48 36 38 Q41 30 48 32 Q53 25 60 25 Q67 25 72 32 Q79 30 84 38 Q90 48 86 64 Q83 78 74 85 Q68 90 60 90 Q52 90 46 85 Q37 78 34 64Z" fill="#C8952A"/>
+        <path d="M41 64 Q38 50 42 43 Q47 36 60 36 Q73 36 78 43 Q82 50 79 64 Q76 76 68 81 Q65 83 60 83 Q55 83 52 81 Q44 76 41 64Z" fill="#1a3d1e"/>
+        <ellipse cx="60" cy="77" rx="12" ry="9" fill="#C8952A" opacity="0.9"/>
+        <ellipse cx="55" cy="77" rx="3" ry="3.5" fill="#152A18"/>
+        <ellipse cx="65" cy="77" rx="3" ry="3.5" fill="#152A18"/>
+        <circle cx="48" cy="57" r="5.5" fill="#C8952A"/>
+        <circle cx="48" cy="57" r="3" fill="#152A18"/>
+        <circle cx="49.5" cy="55.5" r="1.2" fill="white"/>
+        <circle cx="72" cy="57" r="5.5" fill="#C8952A"/>
+        <circle cx="72" cy="57" r="3" fill="#152A18"/>
+        <circle cx="73.5" cy="55.5" r="1.2" fill="white"/>
+        <ellipse cx="35" cy="50" rx="6" ry="9" fill="#C8952A" transform="rotate(-20,35,50)"/>
+        <ellipse cx="85" cy="50" rx="6" ry="9" fill="#C8952A" transform="rotate(20,85,50)"/>
+        <path d="M52 38 Q60 30 68 38 Q64 44 60 43 Q56 44 52 38Z" fill="rgba(200,149,42,0.4)"/>
+      </svg>
+    </div>
+    <div class="logo-div"></div>
+    <div class="logo-wm">
+      <div class="wm-top">TORO <em>AGRO</em></div>
+      <div class="wm-mid">Business Company · SUARL</div>
+      <div class="wm-bot">Dakar, Sénégal</div>
+    </div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a data-target="hero">Accueil</a></li>
+    <li><a data-target="about">À Propos</a></li>
+    <li><a data-target="products">Produits</a></li>
+    <li><a data-target="engagements">Engagements</a></li>
+    <li><a data-target="contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eye">Commerce Agroalimentaire International</div>
+    <h1>L'<em>Excellence</em> Agricole du Sénégal</h1>
+    <p>Toro Agrobusiness Company SUARL — votre partenaire de confiance pour l'import-export de produits agricoles de qualité premium, valorisant les richesses naturelles de l'Afrique de l'Ouest sur les marchés mondiaux.</p>
+    <div class="hero-btns">
+      <button class="btn-gold" data-target="products">Découvrir nos Produits</button>
+      <button class="btn-ghost" data-target="contact">Nous Contacter</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="aimg reveal">
+    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=85" alt="Agriculture Sénégal">
+    <div class="abadge"><strong>100%</strong><span>Qualité Premium</span></div>
+  </div>
+  <div class="reveal">
+    <div class="stag">À Propos de Nous</div>
+    <h2 class="stitle">Votre Partenaire Agroalimentaire de Confiance</h2>
+    <p class="ssub">Toro Agrobusiness Company SUARL est une société sénégalaise spécialisée dans le commerce international de produits agricoles, mettant en valeur les richesses naturelles du Sénégal et de la sous-région ouest-africaine.</p>
+    <div class="afeats">
+      <div class="feat"><div class="ftico">🌿</div><div><h4>Traçabilité Totale</h4><p>De la ferme à l'expédition, chaque produit est rigoureusement suivi et documenté.</p></div></div>
+      <div class="feat"><div class="ftico">📋</div><div><h4>Normes Internationales</h4><p>Respect strict des normes phytosanitaires et réglementaires des marchés cibles.</p></div></div>
+      <div class="feat"><div class="ftico">🚢</div><div><h4>Logistique Maîtrisée</h4><p>Expéditions maritimes et aériennes sécurisées vers tous les marchés mondiaux.</p></div></div>
+      <div class="feat"><div class="ftico">🤝</div><div><h4>Partenariats Durables</h4><p>Relations de confiance à long terme avec nos fournisseurs et partenaires commerciaux.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="phdr reveal">
+    <div><div class="stag">Notre Catalogue</div><h2 class="stitle">Produits &amp; Filières</h2></div>
+    <p style="max-width:380px;color:var(--tg);font-size:0.95rem;line-height:1.85;">Des produits sélectionnés avec soin, conditionnés selon les standards les plus exigeants.</p>
+  </div>
+  <div class="pgrid">
+    <div class="pcard reveal"><div class="pimg"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Céréales"></div><div class="pbdy"><div class="pcat">Céréales &amp; Légumineuses</div><h3>Mil, Sorgho, Niébé</h3><p>Céréales traditionnelles africaines, riches en nutriments, cultivées de façon naturelle et durable.</p></div></div>
+    <div class="pcard reveal"><div class="pimg"><img src="https://images.unsplash.com/photo-1618897996318-5a901fa0e3af?w=600&q=80" alt="Fruits"></div><div class="pbdy"><div class="pcat">Fruits &amp; Légumes</div><h3>Mangues, Pastèques, Haricots Verts</h3><p>Produits frais et transformés de première qualité, triés et emballés avec le plus grand soin.</p></div></div>
+    <div class="pcard reveal"><div class="pimg"><img src="https://images.unsplash.com/photo-1631209121750-a9f656d28f7e?w=600&q=80" alt="Arachides"></div><div class="pbdy"><div class="pcat">Oléagineux</div><h3>Arachides &amp; Dérivés</h3><p>Huile d'arachide brute et raffinée, tourteaux et pâte d'arachide de qualité supérieure.</p></div></div>
+    <div class="pcard reveal"><div class="pimg"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80" alt="Épices"></div><div class="pbdy"><div class="pcat">Épices &amp; Condiments</div><h3>Poivre, Cumin, Bissap</h3><p>Épices séchées et conditionnées sous vide, origine traçable, sans additifs ni conservateurs.</p></div></div>
+    <div class="pcard reveal"><div class="pimg"><img src="https://images.unsplash.com/photo-1611073615830-9b8a6429b31a?w=600&q=80" alt="Poissons"></div><div class="pbdy"><div class="pcat">Produits Halieutiques</div><h3>Poissons Séchés &amp; Fumés</h3><p>Tilapia, Capitaine, Guedj — transformés selon des méthodes artisanales et industrielles de qualité.</p></div></div>
+    <div class="pcard reveal"><div class="pimg"><img src="https://images.unsplash.com/photo-1550411294-5cc93e45a935?w=600&q=80" alt="Karité"></div><div class="pbdy"><div class="pcat">Produits Forestiers</div><h3>Gomme Arabique &amp; Karité</h3><p>Gomme arabique grade alimentaire, beurre de karité brut et raffiné issu du commerce équitable.</p></div></div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section id="engagements">
+  <div class="stag" style="justify-content:center;">Nos Valeurs</div>
+  <h2 class="stitle" style="color:var(--wh);text-align:center;">Nos Engagements</h2>
+  <div class="egrid reveal">
+    <div class="ecard"><div class="eico">🌱</div><h3>Agriculture Durable</h3><p>Nous privilégions des pratiques agricoles respectueuses de l'environnement et des communautés locales.</p></div>
+    <div class="ecard"><div class="eico">⚖️</div><h3>Commerce Équitable</h3><p>Rémunération juste des agriculteurs et transparence totale dans toute notre chaîne d'approvisionnement.</p></div>
+    <div class="ecard"><div class="eico">🔬</div><h3>Contrôle Qualité</h3><p>Chaque lot est analysé et contrôlé avant expédition pour garantir la satisfaction de nos partenaires.</p></div>
+    <div class="ecard"><div class="eico">🤝</div><h3>Ancrage Local</h3><p>Collaboration étroite avec les coopératives et groupements de producteurs de toute la sous-région.</p></div>
+  </div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="stag">Nous Trouver</div>
+  <h2 class="stitle">Contact &amp; Localisation</h2>
+  <div class="cgrid reveal">
+    <div class="cinfo">
+      <h3>Toro Agrobusiness<br>Company SUARL</h3>
+      <div class="iitem"><div class="iico">📍</div><div><h4>Adresse</h4><p>Grand Yoff Cité Millionnaire<br>Villa N°207, Dakar, Sénégal</p></div></div>
+      <div class="iitem"><div class="iico">📞</div><div><h4>Téléphone</h4><a href="tel:+221788452816">+221 78 845 28 16</a></div></div>
+      <div class="iitem"><div class="iico">✉️</div><div><h4>Email</h4><a href="mailto:contact@toroagro.com">contact@toroagro.com</a></div></div>
+      <div class="iitem"><div class="iico">🌐</div><div><h4>Site Web</h4><a href="https://www.toroagrobusiness.com" target="_blank">www.toroagrobusiness.com</a></div></div>
+      <div class="iitem"><div class="iico">🏛️</div><div><h4>N.I.N.E.A</h4><p>005518367</p></div></div>
+      <div style="margin-top:28px;">
+        <div class="stag" style="margin-bottom:10px;">Horaires</div>
+        <p style="font-size:0.88rem;color:var(--tg);line-height:2.1;">Lundi — Vendredi : 08h00 – 18h00<br>Samedi : 08h00 – 13h00<br><strong style="color:var(--gold);">Dimanche : Fermé</strong></p>
+      </div>
+    </div>
+    <div class="mapw">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.8!2d-17.4677!3d14.7397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10d21b3e2c0fd%3A0x40000000!2sGrand+Yoff%2C+Dakar%2C+S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2ssn!4v1700000000000!5m2!1sfr!2ssn" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Toro Agrobusiness - Grand Yoff, Dakar"></iframe>
+    </div>
+  </div>
+  <div class="cform reveal">
+    <h3>Demande de Partenariat Commercial</h3>
+    <div class="frow">
+      <div class="fg"><label>Prénom &amp; Nom</label><input type="text" placeholder="Votre nom complet"></div>
+      <div class="fg"><label>Entreprise</label><input type="text" placeholder="Votre société"></div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label>Email</label><input type="email" placeholder="contact@entreprise.com"></div>
+      <div class="fg"><label>Téléphone</label><input type="tel" placeholder="+221 00 000 00 00"></div>
+    </div>
+    <div class="fg"><label>Produit d'intérêt</label>
+      <select>
+        <option value="">-- Sélectionnez un produit --</option>
+        <option>Céréales &amp; Légumineuses</option>
+        <option>Fruits &amp; Légumes</option>
+        <option>Arachides &amp; Dérivés</option>
+        <option>Épices &amp; Condiments</option>
+        <option>Produits Halieutiques</option>
+        <option>Gomme Arabique &amp; Karité</option>
+        <option>Plusieurs produits</option>
+      </select>
+    </div>
+    <div class="fg"><label>Message</label><textarea placeholder="Décrivez votre besoin, volumes estimés, conditionnement souhaité..."></textarea></div>
+    <button class="btn-gold" id="submitBtn">Envoyer la Demande</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <svg width="72" height="72" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <circle cx="60" cy="60" r="57" fill="none" stroke="#C8952A" stroke-width="3"/>
+        <circle cx="60" cy="60" r="56.5" fill="#152A18"/>
+        <path d="M37 40 Q24 22 15 8 Q22 15 28 28 Q33 36 37 40Z" fill="#C8952A"/>
+        <path d="M83 40 Q96 22 105 8 Q98 15 92 28 Q87 36 83 40Z" fill="#C8952A"/>
+        <path d="M34 64 Q30 48 36 38 Q41 30 48 32 Q53 25 60 25 Q67 25 72 32 Q79 30 84 38 Q90 48 86 64 Q83 78 74 85 Q68 90 60 90 Q52 90 46 85 Q37 78 34 64Z" fill="#C8952A"/>
+        <path d="M41 64 Q38 50 42 43 Q47 36 60 36 Q73 36 78 43 Q82 50 79 64 Q76 76 68 81 Q65 83 60 83 Q55 83 52 81 Q44 76 41 64Z" fill="#1a3d1e"/>
+        <ellipse cx="60" cy="77" rx="12" ry="9" fill="#C8952A" opacity="0.9"/>
+        <ellipse cx="55" cy="77" rx="3" ry="3.5" fill="#152A18"/>
+        <ellipse cx="65" cy="77" rx="3" ry="3.5" fill="#152A18"/>
+        <circle cx="48" cy="57" r="5.5" fill="#C8952A"/>
+        <circle cx="48" cy="57" r="3" fill="#152A18"/>
+        <circle cx="49.5" cy="55.5" r="1.2" fill="white"/>
+        <circle cx="72" cy="57" r="5.5" fill="#C8952A"/>
+        <circle cx="72" cy="57" r="3" fill="#152A18"/>
+        <circle cx="73.5" cy="55.5" r="1.2" fill="white"/>
+        <ellipse cx="35" cy="50" rx="6" ry="9" fill="#C8952A" transform="rotate(-20,35,50)"/>
+        <ellipse cx="85" cy="50" rx="6" ry="9" fill="#C8952A" transform="rotate(20,85,50)"/>
+      </svg>
+      <div class="fbrandtxt">
+        <h2>TORO AGROBUSINESS COMPANY SUARL</h2>
+        <p>Spécialiste du commerce agroalimentaire depuis Dakar, nous mettons en valeur les richesses agricoles du Sénégal et de la sous-région ouest-africaine sur les marchés mondiaux.</p>
+        <span class="ninea">N.I.N.E.A : 005518367</span>
+      </div>
+    </div>
+    <div class="fcols">
+      <div class="fcol"><h4>Navigation</h4><ul>
+        <li><a data-target="hero">Accueil</a></li>
+        <li><a data-target="about">À Propos</a></li>
+        <li><a data-target="products">Produits</a></li>
+        <li><a data-target="engagements">Engagements</a></li>
+        <li><a data-target="contact">Contact</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Produits</h4><ul>
+        <li><a data-target="products">Céréales</a></li>
+        <li><a data-target="products">Fruits &amp; Légumes</a></li>
+        <li><a data-target="products">Arachides</a></li>
+        <li><a data-target="products">Épices</a></li>
+        <li><a data-target="products">Poissons</a></li>
+        <li><a data-target="products">Gomme &amp; Karité</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Contact</h4><ul>
+        <li><a href="tel:+221788452816">+221 78 845 28 16</a></li>
+        <li><a href="mailto:contact@toroagro.com">contact@toroagro.com</a></li>
+        <li><a href="https://www.toroagrobusiness.com" target="_blank">toroagrobusiness.com</a></li>
+        <li><a data-target="contact">Grand Yoff, Cité Millionnaire</a></li>
+        <li><a data-target="contact">Villa N°207 — Dakar 🇸🇳</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>© 2025 Toro Agrobusiness Company SUARL. Tous droits réservés.</p>
+    <p>Grand Yoff Cité Millionnaire, Villa N°207 — Dakar, Sénégal</p>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll - intercept ALL data-target clicks (no href="#...")
+function scrollTo(targetId) {
+  var el = document.getElementById(targetId);
+  if (!el) return;
+  var navH = document.getElementById('mainNav').offsetHeight;
+  var top = el.getBoundingClientRect().top + window.pageYOffset - navH;
+  window.scrollTo({ top: top, behavior: 'smooth' });
+}
+
+document.addEventListener('click', function(e) {
+  var el = e.target.closest('[data-target]');
+  if (el) {
+    e.preventDefault();
+    e.stopPropagation();
+    scrollTo(el.getAttribute('data-target'));
+    document.getElementById('navLinks').classList.remove('open');
+  }
+});
+
+// Hamburger
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Form submit feedback
+var btn = document.getElementById('submitBtn');
+if (btn) btn.addEventListener('click', function() {
+  this.textContent = '✓ Message Envoyé';
+  this.style.opacity = '0.75';
+});
+
+// Scroll reveal
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+
+// Nav shadow
+window.addEventListener('scroll', function() {
+  document.getElementById('mainNav').style.boxShadow = window.scrollY > 60 ? '0 4px 30px rgba(0,0,0,0.45)' : 'none';
+});
+</script>
+</body>
+</html>
